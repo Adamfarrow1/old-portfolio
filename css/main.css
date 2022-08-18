@@ -70,34 +70,67 @@ ul {
   list-style-type: circle;
 }
 
-section.projects {
-  background: #20272e;
-}
-section.projects ul {
-  list-style: none;
-}
-section.projects ul li {
-  background: #006bd6;
+.glider-contain {
   text-align: center;
-  padding: 2em 1em;
-  width: 80%;
-  margin: 0 auto 5em auto;
-  border-radius: 1em;
+  background: var(--primary-color);
+  padding: 0;
+  margin: 0;
 }
-section.projects ul li .title {
-  margin-top: -0.5em;
+.glider-contain .item {
+  background: #006bd6;
+  border-radius: 3em;
 }
-section.projects ul li .button {
-  margin-bottom: 4.5em;
+.glider-contain h1 {
+  text-transform: uppercase;
+  color: rgb(36, 36, 36);
+  font-weight: bold;
+  letter-spacing: 0.3em;
+  margin: 0;
+}
+.glider-contain p {
+  color: white;
+}
+.glider-contain img {
+  height: 5em;
+}
+.glider-contain a {
   text-decoration: none;
   color: white;
-  background: black;
+  background: #003c79;
   padding: 1em 1em;
-  border-radius: 4em;
+  border-radius: 3em;
 }
-section.projects ul li img {
-  width: 5em;
-  height: 5em;
-  margin-top: -4.5em;
-  border-radius: 50%;
+.glider-contain .glider-next {
+  right: 1em;
+}
+
+section.skills {
+  background: #20272E;
+  color: white;
+}
+section.skills .subheading {
+  text-transform: uppercase;
+  color: grey;
+  font-weight: bold;
+  letter-spacing: 0.3em;
+}
+section.skills ul {
+  margin: 0;
+  padding-left: 0.1em;
+}
+section.skills ul li {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  position: relative;
+  list-style: none;
+}
+section.skills ul li:before {
+  content: "";
+  left: -2em;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/bullet.svg");
+  background-size: contain;
 }/*# sourceMappingURL=main.css.map */

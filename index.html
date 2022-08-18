@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/glider.min.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -35,48 +37,111 @@
                 of the foundation exam. The score was very high compared to other students in my class the results of that semesters exam can be found 
                 <a href="http://www.cs.ucf.edu/registration/exm/spr2022/Info-Jan22.pdf">here</a>. 
             </p>
-            <p>
-                A few different technologies I have been using recently are:
-            </p>
-            <ul>
-                <li>C</li>
-                <li>Java</li>
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS/SCSS</li>
-                <li>JavaFx</li>
-            </ul>
+           
         </div>
     </section>
 
-    <section class="projects">
+
+    <section class="skills">
         <div class="container">
-            <ul>
-                <li>
-                    <img src="images/java.svg" alt="">
-
-                    <p class="title">Storage application</p>
-                    <p>Developed a storage app that manages different items using serial numbers and item names.
-                        The product has many different features such as a sort, downloading the file to your computer
-                        , and load file option plus many other small features.
-                    </p>
-                    <a class="button" href="#">click me!</a>
-                </li>
-                <li>
-                    <img src="images/java.svg" alt="">
-
-                    <p class="title">To-Do List</p>
-                    <p>technologies</p>
-                </li>
-                <li>
-                    <img src="images/swift.svg" alt="">
-
-                    <p class="title">random project</p>
-                    <p>technologies</p>
-                </li>
-
-            </ul>
+            
+            <div class="technologies">
+                <p class="subheading">Skills</p>
+                <ul>
+                    <li class="item">
+                        <p>Java</p>
+                    </li>
+                    <li class="item">
+                        <p>JavaFx</p>
+                    </li>
+                    <li class="item">
+                        <p>C</p>
+                    </li>
+                    <li class="item">
+                        <p>JavaScript</p>
+                    </li>
+                    <li class="item">
+                        <p>CSS/SCSS</p>
+                    </li>
+                    <li class="item">
+                        <p>HTML</p>
+                    </li>
+                </ul>
+            </div>  
         </div>
     </section>
+
+    <div class="glider-contain multiple">
+        <h1>projects</h1>
+
+
+        <div class="glider">
+            <figure class="item">
+                <img src="images/java.svg" alt="">
+
+                <p class="title">Storage application</p>
+                <p>Developed a storage app that manages different items using serial numbers and item names.
+                    The product has many different features such as a sort, downloading the file to your computer
+                    , and load file option plus many other small features.
+                </p>
+                <a class="button" href="#">click me!</a>
+            </figure>
+            <figure class="item">
+                <img src="images/java.svg" alt="">
+
+                <p class="title">Storage application</p>
+                <p>Developed a storage app that manages different items using serial numbers and item names.
+                    The product has many different features such as a sort, downloading the file to your computer
+                    , and load file option plus many other small features.
+                </p>
+                <a class="button" href="#">click me!</a>
+            </figure>
+            <figure class="item">
+                <img src="images/java.svg" alt="">
+
+                <p class="title">Storage application</p>
+                <p>Developed a storage app that manages different items using serial numbers and item names.
+                    The product has many different features such as a sort, downloading the file to your computer
+                    , and load file option plus many other small features.
+                </p>
+                <a class="button" href="#">click me!</a>
+            </figure>
+          
+            
+        </div>
+        <div id="dots" class="glider-dots"></div>
+    </div>
+    <script src= "glider.min.js"> </script>
+    <script>
+        new Glider(document.querySelector(".glider"), {
+            slidesToShow: 1,
+            draggable: true,
+            scrollLock: true,
+            dots: '#dots',
+
+            responsive: [
+                {
+                // screens greater than >= 775px
+                breakpoint: 775,
+                settings: {
+                    // Set to `auto` and provide item width to adjust to viewport
+                    slidesToShow: 'auto',
+                    slidesToScroll: 'auto',
+                    itemWidth: 150,
+                    duration: 0.25
+                }
+                },{
+                // screens greater than >= 1024px
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    itemWidth: 150,
+                    duration: 0.25
+                }
+                }
+            ]
+        })
+    </script>
 </body>
 </html>

@@ -81,40 +81,74 @@ ul {
 
 }
 
-section.projects{
-    background:#20272e;
-    ul {
-        list-style: none;
-        li {
-            background: #006bd6;
-            text-align: center;
-            padding: 2em 1em;
-            width: 80%;
-            margin: 0 auto 5em auto;
-            border-radius: 1em;
+.glider-contain {
+    text-align: center;
+    background: var(--primary-color);
+    padding: 0;
+    margin: 0;
 
-            .title{
-                margin-top: -.5em;
-            }
+    .item {
+        background: #006bd6;
+        border-radius: 3em;
+    }
 
-            .button {
-                margin-bottom: 4.5em;
-                text-decoration: none;
-                color: white;
-                background: black;
-                padding: 1em 1em;
-                border-radius: 4em;
-            }
 
-            img {
-                width: 5em;
-                height: 5em;
-                margin-top: -4.5em;
-                border-radius: 50%;
-            }
-        }
 
+    h1 {
+        text-transform: uppercase;
+        color: rgb(36, 36, 36);
+        font-weight: bold;
+        letter-spacing: .3em;
+        margin: 0;
+    }
+    p {
+        color: white;
+    }
+    img {
+        height: 5em;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        background: #003c79;
+        padding: 1em 1em;
+        border-radius: 3em;
+    }
+
+
+    .glider-next{
+        right: 1em;
     }
 }
 
+section.skills {
+    background: #20272E;
+    color: white;
+    .subheading {
+        text-transform: uppercase;
+        color: grey;
+        font-weight: bold;
+        letter-spacing: .3em;
+    }
+    ul {
+        margin: 0;
+        padding-left: .1em;
+        li{
+            font-size: 1.1em;
+            margin-bottom: 1em;
+            margin-left: 2em;
+            position: relative;
+            list-style: none;
+            &:before {
+                content: '';
+                left: -2em;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-image: url('../images/bullet.svg');
+                background-size: contain ;
+            }
+        }
+    }
+}
 
