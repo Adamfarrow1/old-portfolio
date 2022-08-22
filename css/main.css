@@ -18,9 +18,21 @@ ul {
   padding: 0;
 }
 
+.hiddennav {
+  transform: translateY(-100px);
+}
+
 .navbar {
   background: white;
   padding: 1em;
+  position: fixed;
+  transition: 0.5s;
+  z-index: 100;
+  width: 100%;
+  justify-content: space-between;
+}
+.navbar .container {
+  width: 80%;
 }
 .navbar .logo {
   text-decoration: none;
@@ -79,6 +91,7 @@ ul {
 .glider-contain .item {
   background: #006bd6;
   border-radius: 3em;
+  padding: 0;
 }
 .glider-contain h1 {
   text-transform: uppercase;
@@ -133,4 +146,41 @@ section.skills ul li:before {
   height: 20px;
   background-image: url("../images/bullet.svg");
   background-size: contain;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border-radius: 0.3em;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  border: none;
+  margin-bottom: 5em;
+  border-radius: 5em;
+  display: inline-block;
+  padding: 0.8em 2em;
+  width: unset;
+  cursor: pointer;
+}
+
+input.send-message-cta {
+  font-size: 1em;
 }/*# sourceMappingURL=main.css.map */

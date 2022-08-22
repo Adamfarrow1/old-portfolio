@@ -5,7 +5,6 @@
 }
 
 
-
 body{
     background: #F2F2F2;
     margin: 0;
@@ -23,9 +22,22 @@ ul {
 }
 
 
+.hiddennav {
+    transform: translateY(-100px);
+}
+
+
 .navbar{
     background: white;
-    padding: 1em;
+    padding: 1em; 
+    position: fixed;
+    transition: 0.5s;
+    z-index: 100;
+    width: 100%;
+    justify-content: space-between;
+    .container {
+        width: 80%;
+    }
     .logo {
         text-decoration: none;
         font-weight: bold;
@@ -90,6 +102,7 @@ ul {
     .item {
         background: #006bd6;
         border-radius: 3em;
+        padding: 0;
     }
 
 
@@ -152,3 +165,38 @@ section.skills {
     }
 }
 
+h2 {
+    font-size: 2em;
+}
+label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+}
+
+input, textarea {
+    width: 100%;
+    padding: .8em;
+    margin-bottom: 1em;
+    border-radius: .3em;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+    border: none;
+    margin-bottom: 5em;
+    border-radius: 5em;
+    display: inline-block;
+    padding: .8em 2em;
+    width: unset;
+    cursor: pointer;
+}
+
+input.send-message-cta{
+    font-size: 1em;
+}

@@ -22,6 +22,21 @@
                 </ul>
             </nav>
         </div>
+        <script>
+            const nav = document.querySelector(".navbar");
+            let lastScrollY = window.scrollY;
+
+            window.addEventListener("scroll", () =>{
+                if(lastScrollY < window.scrollY){
+                    nav.classList.add("hiddennav");
+                }
+                else{
+                    nav.classList.remove("hiddennav");
+                }
+                
+                lastScrollY = window.scrollY;
+            });
+        </script>
     </div>
 
     <section class="introduction">
@@ -33,7 +48,7 @@
                 I loved technology and wanted it to be apart of my future
             </p>
             <p>
-                Fast forward to today and I am in my junior year at the University of Central Florida. My gpa is a 3.3 and on jan 22nd I scored a 48/50 on the data structures section 
+                Fast forward to today and I am in my junior year at the University of Central Florida. My gpa is a 3.3 and on jan 22nd I scored a 50/50 on the data structures section 
                 of the foundation exam. The score was very high compared to other students in my class the results of that semesters exam can be found 
                 <a href="http://www.cs.ucf.edu/registration/exm/spr2022/Info-Jan22.pdf">here</a>. 
             </p>
@@ -143,5 +158,19 @@
             ]
         })
     </script>
+
+    <section class="contact-me">
+        <div class="conatiner">
+            <h2>Contact</h2>
+            <form action>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="20" rows="10"></textarea>
+                <input type="submit" class="send-message-cta" value="send message">
+            </form>
+        </div>
+    </section>
+
 </body>
 </html>
