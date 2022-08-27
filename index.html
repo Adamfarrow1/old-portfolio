@@ -12,43 +12,31 @@
 <body>
     <div class="navbar">
         <div class="container">
-            <a class="logo" href="index.html"><span>Adam Farrow's</span> Resume</a>
+            <a class="logo" href="index.html">Adam <span>Farrow</span></a>
             <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Open Navigation">
             <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>About me</li>
-                    <li>Contact</li>
+                <img id="mobile-exit-cta" class="mobile-exit" src="images/exit.svg" alt="mobile-menu-exit">
+                <ul class="primary-nav">
+                    <li><a id="home-nav" href="#">Home</a></li>
+                    <li><a id ="skills-nav" href="#skills-link">Skills</a></li>
+                    <li><a id="glider-nav" href="#glider">Projects</a></li>
+                    <li><a id="contact-nav" href="#contact">Contact</a></li>
+                    <li><a id="git-link" href="https://github.com/Adamfarrow1/">Github</a></li>
                 </ul>
             </nav>
         </div>
-        <script>
-            const nav = document.querySelector(".navbar");
-            let lastScrollY = window.scrollY;
-
-            window.addEventListener("scroll", () =>{
-                if(lastScrollY < window.scrollY){
-                    nav.classList.add("hiddennav");
-                }
-                else{
-                    nav.classList.remove("hiddennav");
-                }
-                
-                lastScrollY = window.scrollY;
-            });
-        </script>
     </div>
 
     <section class="introduction">
         <div class="container">
             <p class = "subheading">My name is</p>
             <h1 class = "name">Adam Farrow</h1>
-            <p>Hello! My name is Adam Farrow, I enjoy developing software and creating websites. My passion started back in 2013 when I was 12 years old and
+            <p>I enjoy developing software and creating websites. My passion started back in 2013 when I was 12 years old and
                 I decided to jailbreak my iphone. After playing around with the different customizations for days on end I knew that 
                 I loved technology and wanted it to be apart of my future
             </p>
             <p>
-                Fast forward to today and I am in my junior year at the University of Central Florida. My gpa is a 3.3 and on jan 22nd I scored a 50/50 on the data structures section 
+                Fast forward to today and I am in my junior year at the University of Central Florida. My gpa is a 3.3 and on jan 22nd I scored a 48/50 on the data structures section 
                 of the foundation exam. The score was very high compared to other students in my class the results of that semesters exam can be found 
                 <a href="http://www.cs.ucf.edu/registration/exm/spr2022/Info-Jan22.pdf">here</a>. 
             </p>
@@ -57,10 +45,10 @@
     </section>
 
 
-    <section class="skills">
+    <section class="skills" id="skills-link">
         <div class="container">
             
-            <div class="technologies">
+            <div class="skills">
                 <p class="subheading">Skills</p>
                 <ul>
                     <li class="item">
@@ -86,7 +74,7 @@
         </div>
     </section>
 
-    <div class="glider-contain multiple">
+    <div id="glider" class="glider-contain multiple">
         <h1>projects</h1>
 
 
@@ -97,80 +85,52 @@
                 <p class="title">Storage application</p>
                 <p>Developed a storage app that manages different items using serial numbers and item names.
                     The product has many different features such as a sort, downloading the file to your computer
-                    , and load file option plus many other small features.
+                    , and load file option plus many other small features. More information can be found at the link below.
                 </p>
-                <a class="button" href="#">click me!</a>
+                <a class="button" href="https://github.com/Adamfarrow1/Storage-app">click me!</a>
             </figure>
             <figure class="item">
                 <img src="images/java.svg" alt="">
 
-                <p class="title">Storage application</p>
-                <p>Developed a storage app that manages different items using serial numbers and item names.
-                    The product has many different features such as a sort, downloading the file to your computer
-                    , and load file option plus many other small features.
+                <p class="title">To-Do List</p>
+                <p>The To-Do List application was created to store things that the user needs to complete
+                    by a certain date. There are similar features to the storage app such that you can sort,
+                     load, and save different files. More information can be found at the link below.
                 </p>
-                <a class="button" href="#">click me!</a>
+                <a class="button" href="https://github.com/Adamfarrow1/ToDo-List-app">click me!</a>
             </figure>
             <figure class="item">
-                <img src="images/java.svg" alt="">
+                <img src="images/HTML.svg" alt="">
 
-                <p class="title">Storage application</p>
-                <p>Developed a storage app that manages different items using serial numbers and item names.
-                    The product has many different features such as a sort, downloading the file to your computer
-                    , and load file option plus many other small features.
+                <p class="title">This website</p>
+                <p>This website was created as another form of my resume. I decided to create a website
+                     because I wanted to see how fast I could pick up HTML and CSS. The source code for the
+                      website can be found below.
                 </p>
-                <a class="button" href="#">click me!</a>
+                <a class="button" href="https://github.com/Adamfarrow1/Adamfarrow1.github.io">click me!</a>
             </figure>
-          
             
         </div>
         <div id="dots" class="glider-dots"></div>
     </div>
     <script src= "glider.min.js"> </script>
-    <script>
-        new Glider(document.querySelector(".glider"), {
-            slidesToShow: 1,
-            draggable: true,
-            scrollLock: true,
-            dots: '#dots',
 
-            responsive: [
-                {
-                // screens greater than >= 775px
-                breakpoint: 775,
-                settings: {
-                    // Set to `auto` and provide item width to adjust to viewport
-                    slidesToShow: 'auto',
-                    slidesToScroll: 'auto',
-                    itemWidth: 150,
-                    duration: 0.25
-                }
-                },{
-                // screens greater than >= 1024px
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    itemWidth: 150,
-                    duration: 0.25
-                }
-                }
-            ]
-        })
-    </script>
+    <section id="contact" class="contact-me">
+        <div class="container">
 
-    <section class="contact-me">
-        <div class="conatiner">
-            <h2>Contact</h2>
-            <form action>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" cols="20" rows="10"></textarea>
-                <input type="submit" class="send-message-cta" value="send message">
-            </form>
+            <div class="center">
+                <h2>Contact</h2>
+                <ul>
+                    <li>Email: <br> <span>adamfarrow1@gmail.com</span></li>
+                    <li>Number: <br> <span>407-341-4243</span></li>
+                    <li>Location: <br> <span>Orlando, Florida</span></li>
+                    <li>School: <br> <span>University of Central Florida</span></li>
+                </ul>
+            </div>
         </div>
     </section>
 
+    <script src="main.js">
+    </script>
 </body>
 </html>

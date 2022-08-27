@@ -31,14 +31,13 @@ ul {
   width: 100%;
   justify-content: space-between;
 }
-.navbar .container {
-  width: 80%;
-}
 .navbar .logo {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2em;
+  margin-top: 0.25em;
   color: black;
+  width: 10em;
 }
 .navbar .logo span {
   color: var(--primary-color);
@@ -52,6 +51,7 @@ ul {
 }
 .navbar .mobile-menu {
   cursor: pointer;
+  margin-right: 2em;
 }
 
 .introduction {
@@ -130,6 +130,8 @@ section.skills .subheading {
 section.skills ul {
   margin: 0;
   padding-left: 0.1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
 }
 section.skills ul li {
   font-size: 1.1em;
@@ -142,10 +144,12 @@ section.skills ul li:before {
   content: "";
   left: -2em;
   position: absolute;
+  top: 1em;
   width: 20px;
   height: 20px;
   background-image: url("../images/bullet.svg");
   background-size: contain;
+  margin-right: 0.5em;
 }
 
 h2 {
@@ -183,4 +187,104 @@ input[type=submit] {
 
 input.send-message-cta {
   font-size: 1em;
+}
+
+nav.display-menu {
+  display: block;
+  overflow-y: hidden;
+}
+
+nav {
+  position: fixed;
+  overflow-y: visible;
+  z-index: 999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background: #20272E;
+  height: 100vh;
+  padding: 1em;
+}
+nav ul.primary-nav {
+  margin-top: 5em;
+}
+nav li {
+  list-style-type: none;
+}
+nav li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  font-size: 1.3em;
+  text-align: right;
+}
+nav li a:hover {
+  font-weight: bold;
+}
+
+#git-link {
+  color: black;
+  background: white;
+  border-radius: 2em;
+  border: 3px solid var(--primary-color);
+}
+#git-link:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.mobile-exit {
+  float: right;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+section.contact-me h2 {
+  text-align: center;
+  font-size: 1.8em;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: black;
+}
+section.contact-me .center {
+  width: 11em;
+  margin: 0 auto;
+  text-align: left;
+}
+section.contact-me li {
+  font-size: 0.8em;
+  list-style: none;
+  padding: 1em;
+}
+
+@media only screen and (min-width: 300px) {
+  section.contact-me li {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 786px) {
+  .mobile-exit, .mobile-menu {
+    display: none;
+  }
+  .navbar nav {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav a {
+    color: black;
+  }
+  .navbar nav ul {
+    display: flex;
+    font-size: 0.8em;
+    padding: 0.1em 1em;
+  }
+  .navbar nav ul.primary-nav {
+    margin: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
