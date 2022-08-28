@@ -298,6 +298,18 @@ section.contact-me {
         }
     }
 
+    
+    #git-link {
+        color: white;
+        background: none;
+        border-radius: 0;
+        border: none;
+        &:hover {
+            background: none;
+            color: none;
+        }  
+    }
+
 }
 
 
@@ -307,6 +319,8 @@ section.contact-me {
         display: none;
 
     }
+
+
 
 
     .navbar nav {

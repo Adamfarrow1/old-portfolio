@@ -262,6 +262,16 @@ section.contact-me li {
   section.contact-me li {
     font-size: 1em;
   }
+  #git-link {
+    color: white;
+    background: none;
+    border-radius: 0;
+    border: none;
+  }
+  #git-link:hover {
+    background: none;
+    color: none;
+  }
 }
 @media only screen and (min-width: 786px) {
   .mobile-exit, .mobile-menu {
