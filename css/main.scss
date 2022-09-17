@@ -102,9 +102,22 @@ ul {
     .item {
         background: #006bd6;
         border-radius: 3em;
-        padding: 0;
+        padding: 0;  
+        .button {
+            text-decoration: none;
+            color: white;
+            background: #003c79;
+            padding: 1em 1em;
+            border-radius: 3em;
+        }
+       
+        #link {
+            color: rgb(36, 36, 36);
+            font-weight: bold;
+        }
+    
+        
     }
-
 
 
     h1 {
@@ -120,14 +133,8 @@ ul {
     img {
         height: 5em;
     }
-    a {
-        text-decoration: none;
-        color: white;
-        background: #003c79;
-        padding: 1em 1em;
-        border-radius: 3em;
-    }
-
+  
+    
 
     .glider-next{
         right: 1em;

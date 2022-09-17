@@ -93,6 +93,17 @@ ul {
   border-radius: 3em;
   padding: 0;
 }
+.glider-contain .item .button {
+  text-decoration: none;
+  color: white;
+  background: #003c79;
+  padding: 1em 1em;
+  border-radius: 3em;
+}
+.glider-contain .item #link {
+  color: rgb(36, 36, 36);
+  font-weight: bold;
+}
 .glider-contain h1 {
   text-transform: uppercase;
   color: rgb(36, 36, 36);
@@ -105,13 +116,6 @@ ul {
 }
 .glider-contain img {
   height: 5em;
-}
-.glider-contain a {
-  text-decoration: none;
-  color: white;
-  background: #003c79;
-  padding: 1em 1em;
-  border-radius: 3em;
 }
 .glider-contain .glider-next {
   right: 1em;
